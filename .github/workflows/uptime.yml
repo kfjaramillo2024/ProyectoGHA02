@@ -13,9 +13,12 @@
 # * Docs and more: https://upptime.js.org
 # * More by Anand Chowdhary: https://anandchowdhary.com
 
-
 name: Uptime CI
 on:
+push:
+    branches:
+      - master
+  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
   repository_dispatch:
