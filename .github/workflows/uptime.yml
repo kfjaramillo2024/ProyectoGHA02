@@ -14,8 +14,9 @@
 # * More by Anand Chowdhary: https://anandchowdhary.com
 
 name: Uptime CI
+
 on:
-push:
+  push:
     branches:
       - master
   workflow_dispatch:
@@ -23,7 +24,7 @@ push:
     - cron: "*/5 * * * *"
   repository_dispatch:
     types: [uptime]
-  workflow_dispatch:
+
 jobs:
   release:
     name: Check status
