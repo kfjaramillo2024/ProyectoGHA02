@@ -13,18 +13,14 @@
 # * Docs and more: https://upptime.js.org
 # * More by Anand Chowdhary: https://anandchowdhary.com
 
-name: Uptime CI
 
+name: Uptime CI
 on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
   repository_dispatch:
     types: [uptime]
-
+  workflow_dispatch:
 jobs:
   release:
     name: Check status
